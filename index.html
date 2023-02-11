@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DiGauss - Resonance Processing and Manipulation</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<body id="body" style="visibility: hidden;">
+
+
+  <div class="Container">
+
+
+    <div class="Menu-Container">
+
+      <div class="group" id="Image-Group">
+        <div class="hold-image">
+          <div class="image-alignment">
+            <img align="middle" alt='Original' id="reference-image"></img>
+          </div>
+        </div>
+
+        <select class="menuBar" id="selectImageDropdown"></select>
+
+
+      </div>
+
+
+
+      <div class="group" id="Filter-Group" style="display: none">
+
+        <lable>Range:</lable>
+        <select class="menuBar" id="rangeDropdown"></select>
+
+        <lable>Window:</lable>
+        <lable id="windowDropdownScale"></lable>
+        <select class="menuBar" id="windowDropdown"></select>
+
+
+        <div class="menubar-checkbox" id="range-checkbox" ></div>
+      </div>
+
+      <div class="group" id="Bit-Depth-Group">
+        <label>Bit Depth:</label>
+        <select class="menuBar" id="bitDepthDropdown"></select>
+      </div>
+
+
+
+      <div id="Sequencer-Container" class="Sequencer-Container">
+        <div class="slidecontainer" id="slideContainer">
+          <div class="inputBlock">
+            <p>Gaussian Blur: <span id="GaussianAmount"></span></p>
+            <p class="helpTip">Controls the radius of the gaussian blur.</p>
+            <input type="range" min="0" max="1000" value="900" class="slider" id="GaussianSlider">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="Filter-UI-Container">
+
+
+
+
+
+
+
+
+
+
+
+
+          <div id="webgl-canvas-container" class="IMAGE" >
+            <canvas id="webgl-canvas"></canvas>
+          </div>
+
+
+
+
+
+  </div>
+
+
+<script src="public/bundle.js"></script>
+
+</body>
+
+
+</html>
